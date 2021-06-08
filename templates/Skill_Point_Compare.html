@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+    <body>
+        <div class="container">
+            <h1>Compare Skill Point</h1>
+                <form action="{{ url_for('get_gap') }}" method="post">
+					<table>
+						<tr>
+							<td class="boxleft">
+							<textarea id="confirmationText" class="text" cols="80" rows ="20" name="JD"></textarea>
+							</td>
+							<td>
+							<input type="submit" value="compare">
+							</td>
+							<td class="boxright">
+							<textarea id="confirmationText" class="text" cols="80" rows ="20" name="CV"></textarea>
+							</td>
+						</tr>
+					</table>
+                </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+<style> 
+textarea
+{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+width:600px;
+border-radius:25px;
+-moz-border-radius:25px;
+float:left;
+white-space: pre-line;
+}
+</style>
+</head>
+
+<html>
+    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+    <body>
+        <div class="container">
+            <h1>Resume Parser</h1>
+                <form action="{{ url_for('get_resumer_parser') }}" method="post">
+                <textarea id="confirmationText" class="text" cols="86" rows ="40" name="CV"></textarea>
+                   <input type="submit" value="Send">
+                </form>
+        </div>
+    </body>
+</html>

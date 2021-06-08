@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="//unpkg.com/wangeditor/release/wangEditor.min.js" type="text/javascript" charset="utf-8"></script>
+<style> 
+div
+{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+width:600px;
+border-radius:25px;
+-moz-border-radius:25px;
+float:left;
+white-space: pre-line;
+}
+</style>
+<title>Resume Parser</title>
+</head>
+<body>
+<tr id="editor" class="display-flex">
+
+<div id="JD">
+{% autoescape off %}
+   {{Resume}}
+{% endautoescape %}
+</div>
+</tr>
+<script type="text/javascript">
+var E1 = window.wangEditor
+var editor1 = new E1('#JD')
+editor1.create()
+
+</script>
+</body>
+</html>
