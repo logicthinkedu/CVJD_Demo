@@ -183,7 +183,7 @@ for i in range(0,len(intermediate_prediction)):
     
     
 #tfidf = TfidfModel.load( r"tfidf_model/my_corpora.tfidf_model" )
-tfidf = TfidfModel.load( "/app/tfidf_model/my_corpora.tfidf_model" )
+tfidf = TfidfModel.load( r"/app/tfidf_model/my_corpora.tfidf_model" )
 
 def get_Sentence_Vector( wordID_list ):
     word_count_list = Counter([w for w in wordID_list if w != 0]).most_common()
