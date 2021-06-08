@@ -48,7 +48,6 @@ import warnings
 warnings.filterwarnings('ignore')
 
 h5py.run_tests()
-
 ###############################################################################
 
 def get_HTML(my_doc, ent_list):
@@ -99,7 +98,9 @@ nlp = spacy.load("en_core_web_md")
 with open(r'dataset/word2idx.json', "r") as f:
     word2idx = json.load(f)
 
-textCNN_model = load_model(os.path.join("./model/","my_JD_presetation_model.h5"))
+
+textCNN_model = load_model(r"model/my_JD_presetation_model.h5")
+
 layer_output = textCNN_model.get_layer('concatenate').output
 intermediate_model = tf.keras.models.Model(inputs=textCNN_model.input,outputs=layer_output)
 
@@ -181,8 +182,8 @@ for i in range(0,len(intermediate_prediction)):
     JD_Vector_List.append( intermediate_prediction[i][0][0] )
     
     
-tfidf = TfidfModel.load( os.path.join("./tfidf_model/","my_corpora.tfidf_model") )
-
+#tfidf = TfidfModel.load( os.path.join(r"./tfidf_model/","my_corpora.tfidf_model") )
+tfidf = TfidfModel.load( r"tfidf_model/my_corpora.tfidf_model" )
 def get_Sentence_Vector( wordID_list ):
     word_count_list = Counter([w for w in wordID_list if w != 0]).most_common()
     return np.mean([tem[1] * embeddings_matrix[tem[0]] for tem in tfidf[word_count_list] ] ,axis=0)
