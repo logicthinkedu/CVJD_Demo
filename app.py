@@ -47,7 +47,6 @@ import altair as alt
 import warnings
 warnings.filterwarnings('ignore')
 
-h5py.run_tests()
 ###############################################################################
 
 def get_HTML(my_doc, ent_list):
@@ -90,7 +89,7 @@ for ind, row in SKILL_Hierarchical_relation_DF.iterrows():
     SKILL_relation_Dict[row['node1'].lower()] = row['node2'].lower()
 
 print("Loading:")
-
+print( os.getcwd() )
 ###############################################################################
 max_word_length = 500
 
