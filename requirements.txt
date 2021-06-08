@@ -78,7 +78,7 @@ soupsieve==2.2.1
 spacy==2.3.2
 spacy-legacy==3.0.1
 srsly==1.0.5
-tensorboard
+tensorboard==2.2.0
 tensorboard-plugin-wit==1.8.0
 tensorflow-cpu==2.2.0
 tensorflow-estimator==2.2.0
