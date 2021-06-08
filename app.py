@@ -89,6 +89,7 @@ SKILL_relation_Dict = {}
 for ind, row in SKILL_Hierarchical_relation_DF.iterrows():
     SKILL_relation_Dict[row['node1'].lower()] = row['node2'].lower()
 
+print("Loading:")
 
 ###############################################################################
 max_word_length = 500
