@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import h5py
 import os
 import re
 import json
@@ -45,6 +46,8 @@ import altair as alt
 
 import warnings
 warnings.filterwarnings('ignore')
+
+h5py.run_tests()
 
 ###############################################################################
 
