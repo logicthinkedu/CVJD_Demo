@@ -47,8 +47,10 @@ import altair as alt
 import warnings
 warnings.filterwarnings('ignore')
 
-par_dir = os.path.dirname(os.path.abspath(__file__))
-os.chdir(par_dir)
+import sys
+sys.path.append('..')
+#par_dir = os.path.dirname(os.path.abspath(__file__))
+#os.chdir(par_dir)
 
 ###############################################################################
 
